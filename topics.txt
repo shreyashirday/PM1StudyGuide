@@ -1,0 +1,10 @@
+Topics to Cover
+---------------
+searching + sorting
+classes, scope, operators
+inheritance + polymorphism
+templates
+queue + stack
+lists + trees vs unordered hashtables
+functional programming
+pseudo-random numbers
