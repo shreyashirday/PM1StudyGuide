@@ -21,6 +21,18 @@ int passByReference(int& value){
 
 }
 
+//don't look at this until you are told too
+int recursiveFibonacci(int n){
+  //if n is 0 or 1 return its value; this is the terminating value
+  if(n == 0 or n == 1){
+    return n;
+  }else{
+    //otherwise, add the recursive of number before and the number 2 numbers before it
+    return recursiveFibonacci(n - 1) + recursiveFibonacci(n - 2);
+  }
+
+}
+
 int main(int agrc, char** argv){
 
   //let's start off with pointers
@@ -58,8 +70,15 @@ int main(int agrc, char** argv){
   int newAnswer = passByReference(reference);
   std::cout << "newAnswer = " << newAnswer << std::endl; //should print out 54;
 
-  
+  //ok, recursive functions. so in order to understand recursive functions, you must understand recursive functions
+  //you see what I did there? A recursive function is a function that calls itself and it usually has some terminating factor...like a loop!
+  //except ongoing recursive functions could cause a memory overhead
+  //look at the fibonacci function above to recursive functions
 
+  int newerAnswer = recursiveFibonacci(4); //should give 3;
+  std::cout << "newerAnswer = " << newerAnswer << std::endl;
+
+  return 0;
 
 
 }
